@@ -1,0 +1,46 @@
+{
+  "_hinweis": "Einzige Stelle für Namen, E-Mail-Adressen und Telefonnummern. Vorstand, Kontaktseite, Seitenleisten (Schnupperflug, Rundflüge, PPR, Mitglied …) und die Empfänger der Formulare (api/empfaenger.php, wird beim Build erzeugt) holen die Angaben hier ab. Neue Person: nur unter 'people' eintragen bzw. ändern.",
+  "people": {
+    "praesident": { "name": "Jaroslav Zuzak", "title": "Präsident", "email": "praesident@schmerlat.ch" },
+    "cheffluglehrer": { "name": "Christian «Foody» Müller", "title": "Cheffluglehrer", "email": "cheffluglehrer@schmerlat.ch",
+      "phones": [ { "label": "Tel. G.", "number": "052 645 04 22" }, { "label": "Natel", "number": "076 400 65 30" } ] },
+    "kassier": { "name": "Richard Schnetzler", "title": "Kassier", "email": "kassier@schmerlat.ch" },
+    "aktuar": { "name": "Robert Huber", "title": "Aktuar", "email": "aktuar@schmerlat.ch" },
+    "flugplatzchef": { "name": "Nicholas Edmonds", "title": "Flugplatzchef", "email": "flugplatzchef@schmerlat.ch" },
+    "hangarchef": { "name": "Tani Rieben", "title": "Hangarchef", "email": "hangarchef@schmerlat.ch" },
+    "materialwart": { "name": "Pascal Peter", "title": "Materialwart", "email": "materialwart@schmerlat.ch" },
+    "rundflug": { "name": "Albert Studerus", "title": "Koordination Rundflüge und Gutscheine", "email": "rundflug@schmerlat.ch",
+      "phones": [ { "label": "Mobile", "number": "+41 76 335 91 91" } ] },
+    "passivmitglied": { "name": "Marcel Iten", "title": "Passivmitglieder", "email": "passivmitglied@schmerlat.ch" },
+    "webmaster": { "name": "Christian Schlatter", "title": "Webmaster", "email": "webmaster@schmerlat.ch" },
+    "vorstand": { "name": "Vorstand der SGS", "title": "Vorstand", "email": "vorstand@schmerlat.ch" }
+  },
+  "allgemein": "praesident",
+  "vorstand": [
+    { "person": "praesident", "role": "Präsident", "photo": "assets/img/vorstand/zuzak.jpg" },
+    { "person": "cheffluglehrer", "role": "Cheffluglehrer / Vizepräsident", "photo": "assets/img/vorstand/mueller.jpg" },
+    { "person": "kassier", "role": "Kassier", "photo": "" },
+    { "person": "aktuar", "role": "Aktuar", "photo": "" },
+    { "person": "flugplatzchef", "role": "Flugplatzleiter", "photo": "assets/img/vorstand/edmonds.jpg" },
+    { "person": "hangarchef", "role": "Hangarchef", "photo": "assets/img/vorstand/rieben.jpg" },
+    { "person": "materialwart", "role": "Materialwart", "photo": "" }
+  ],
+  "kontaktseite": [
+    { "person": "praesident", "role": "Präsident" },
+    { "person": "flugplatzchef", "role": "Flugplatzchef" },
+    { "person": "cheffluglehrer", "role": "Cheffluglehrer, Schnupperflüge" },
+    { "person": "rundflug", "role": "Rundflüge und Gutscheine" },
+    { "person": "passivmitglied", "role": "Passivmitglieder" },
+    { "person": "webmaster", "role": "Webmaster" }
+  ],
+  "_formulare": "Wer erhält welches Formular? PRÜFEN: Safety-Meldung geht an den Präsidenten, bis ein Safety Officer feststeht.",
+  "formulare": {
+    "PPR-Anfrage": "flugplatzchef",
+    "Safety-Meldung": "praesident",
+    "Schnupperflug": "cheffluglehrer",
+    "Gutschein": "rundflug",
+    "Mitgliedschaft": "praesident",
+    "Mitgliedschaft Passiv": "passivmitglied",
+    "Kontakt": "praesident"
+  }
+}

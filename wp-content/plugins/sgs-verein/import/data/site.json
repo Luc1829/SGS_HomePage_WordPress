@@ -1,0 +1,27 @@
+{
+  "_hinweis": "Quelle: schmerlat.ch, Seite «Kontakte / Anfahrt». Personen und E-Mail-Adressen stehen zentral in src/data/contacts.json. Vereinsdaten (Gründung, seit wann auf dem Schmerlat) und Flugbetriebstage unter 'verein' und 'flugbetrieb'.",
+  "name": "Segelfluggruppe Schaffhausen",
+  "shortName": "SG Schaffhausen",
+  "description": "Segelfluggruppe Schaffhausen auf dem Flugplatz Schmerlat (LSPF): Flugbetrieb, Wetter, Rundflüge, Kiosk und Segelflugausbildung.",
+  "verein": {
+    "gegruendet": "1. Mai 1933",
+    "gegruendetJahr": 1933,
+    "aufDemSchmerlatSeit": 1937
+  },
+  "flugbetrieb": "an den Wochenenden",
+  "address": {
+    "street": "Postfach",
+    "zip": "8201",
+    "city": "Schaffhausen"
+  },
+  "location": "Flugplatz Schmerlat, zwischen Neunkirch und Löhningen",
+  "phone": "+41 52 681 20 90",
+  "phoneNote": "nur am Wochenende, bei Flugwetter besetzt",
+  "mapUrl": "https://www.google.com/maps/search/?api=1&query=Flugplatz+Schmerlat",
+  "directions": "Zwischen Neunkirch und Löhningen, in den «Stockegerten», wie der alte Flurname heisst, steht mitten im Klettgau und etwas erhöht ein kleines Stück Wald. An dessen Nordrand liegt der Schmerlat, der einzige Flugplatz im Kanton Schaffhausen.",
+  "bank": {
+    "name": "BS Bank Schaffhausen AG",
+    "bc": "6858",
+    "iban": "CH07 0685 8042 3000 1310 5"
+  }
+}

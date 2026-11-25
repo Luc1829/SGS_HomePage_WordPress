@@ -1,0 +1,12 @@
+/*
+Theme Name:        SGS
+Description:       Theme der Segelfluggruppe Schaffhausen, nach dem Design-System «SGS» (Farben, Schrift und Abstände in assets/css/tokens.css). Benötigt das Plugin «SGS Verein».
+Version:           0.1.0
+Requires at least: 6.4
+Requires PHP:      8.0
+Author:            Segelfluggruppe Schaffhausen
+License:           GPL-2.0-or-later
+Text Domain:       sgs
+*/
+
+/* Die Styles stehen in assets/css/tokens.css und assets/css/site.css. */

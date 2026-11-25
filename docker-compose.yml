@@ -1,0 +1,56 @@
+# Lokale Testinstallation: docker compose up -d, danach http://localhost:8080
+# E-Mails landen nicht im Internet, sondern in Mailpit: http://localhost:8025
+services:
+  db:
+    image: mariadb:11
+    environment:
+      MARIADB_DATABASE: wordpress
+      MARIADB_USER: wordpress
+      MARIADB_PASSWORD: wordpress
+      MARIADB_ROOT_PASSWORD: wordpress
+    volumes:
+      - db:/var/lib/mysql
+
+  wordpress:
+    image: wordpress:php8.3-apache
+    depends_on: [db]
+    ports:
+      - "8080:80"
+    environment:
+      WORDPRESS_DB_HOST: db
+      WORDPRESS_DB_NAME: wordpress
+      WORDPRESS_DB_USER: wordpress
+      WORDPRESS_DB_PASSWORD: wordpress
+      WORDPRESS_CONFIG_EXTRA: |
+        define('WP_ENVIRONMENT_TYPE', 'local');
+    volumes:
+      - wp:/var/www/html
+      - ./wp-content/themes/sgs:/var/www/html/wp-content/themes/sgs
+      - ./wp-content/plugins/sgs-verein:/var/www/html/wp-content/plugins/sgs-verein
+      - ./wp-content/plugins/sgs-formulare:/var/www/html/wp-content/plugins/sgs-formulare
+
+  # Befehle: docker compose run --rm cli wp sgs import
+  cli:
+    image: wordpress:cli-php8.3
+    depends_on: [wordpress]
+    user: "33:33"
+    environment:
+      WORDPRESS_DB_HOST: db
+      WORDPRESS_DB_NAME: wordpress
+      WORDPRESS_DB_USER: wordpress
+      WORDPRESS_DB_PASSWORD: wordpress
+    volumes:
+      - wp:/var/www/html
+      - ./wp-content/themes/sgs:/var/www/html/wp-content/themes/sgs
+      - ./wp-content/plugins/sgs-verein:/var/www/html/wp-content/plugins/sgs-verein
+      - ./wp-content/plugins/sgs-formulare:/var/www/html/wp-content/plugins/sgs-formulare
+    profiles: [cli]
+
+  mailpit:
+    image: axllent/mailpit
+    ports:
+      - "8025:8025"
+
+volumes:
+  db:
+  wp:

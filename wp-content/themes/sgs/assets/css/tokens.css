@@ -1,0 +1,82 @@
+/* SGS Design-System – Tokens
+   Quelle: Design-System «SGS» (https://claude.ai/code/artifact/ef1fa68f-2afd-43a9-887c-41ae74a3b46f),
+   Datei project/tokens.json. Werte hier nur ändern, wenn sie sich dort ändern.
+   site.css verwendet ausschliesslich diese Variablen. */
+
+@font-face {
+  font-family: "Source Sans 3";
+  src: url("../fonts/source-sans-3-latin-wght-normal.woff2") format("woff2");
+  font-weight: 200 900; font-style: normal; font-display: swap;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Source Sans 3";
+  src: url("../fonts/source-sans-3-latin-ext-wght-normal.woff2") format("woff2");
+  font-weight: 200 900; font-style: normal; font-display: swap;
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "Source Sans 3";
+  src: url("../fonts/source-sans-3-latin-wght-italic.woff2") format("woff2");
+  font-weight: 200 900; font-style: italic; font-display: swap;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+:root {
+  /* Grundfarben aus dem Logo */
+  --sgs-blau: #0877c2;        /* Markenblau: Hauptbuttons, Streifen, grosse Titel. Als Text nur auf --surface */
+  --sgs-blau-tief: #05598f;   /* Hover von primary, Links */
+  --himmel-300: #86bae1;      /* Streifenton, Flächen, Diagramme – nie Text */
+  --himmel-100: #c8e2f1;      /* Trennlinien */
+  --himmel-50: #e0eef6;       /* Hinweisflächen */
+  --logo-grau: #8a8a8c;       /* nur Rahmen von Feldern oder Text ab 24 px */
+  --nachtblau: #0b2a42;       /* Textfarbe, Schrift auf Orange */
+  --signalorange: #f39200;    /* höchstens ein Call-to-Action pro Seite */
+
+  /* Rollen (Theme «Hell») */
+  --surface: #ffffff;
+  --surface-alt: #f5f9fc;     /* Fussbereich, Seitenleisten, Tabellenköpfe */
+  --surface-tint: var(--himmel-50);
+  --ink: var(--nachtblau);
+  --ink-muted: #4d5f6e;
+  --border: var(--himmel-100);
+  --border-strong: var(--logo-grau);
+  --primary: var(--sgs-blau);
+  --primary-hover: var(--sgs-blau-tief);
+  --on-primary: #ffffff;
+  --link: var(--sgs-blau-tief);
+  --accent: var(--signalorange);
+  --on-accent: var(--nachtblau);
+  --accent-ink: #a34c00;      /* orange Schrift und Warnungen */
+  --success: #1d7348;
+  --danger: #c2352b;
+
+  /* Schrift: eine Familie, sieben Stufen */
+  --font-sans: "Source Sans 3", "Segoe UI", system-ui, sans-serif;
+  --text-display: 2.75rem;    /* 44/48, 700 – eine Schlagzeile pro Seite */
+  --text-title: 1.875rem;     /* 30/36, 700 – Seitentitel */
+  --text-heading: 1.375rem;   /* 22/28, 600 – Abschnitte */
+  --text-subheading: 1.125rem;/* 18/24, 600 – Kartentitel */
+  --text-body: 1rem;          /* 16/24, 400 */
+  --text-small: .875rem;      /* 14/20, 400 – Metadaten, Legenden */
+  --text-label: .75rem;       /* 12/16, 600, 0.08em, Versalien */
+
+  /* Abstände: 4-px-Raster */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-12: 48px;
+  --space-16: 64px;
+
+  /* Radien: kantig wie das Logo-Quadrat, keine Pillen */
+  --radius-sm: 2px;           /* Badges, Felder */
+  --radius-md: 4px;           /* Buttons, Karten, Hinweise */
+  --radius-lg: 8px;           /* Dialoge, grosse Bilder */
+
+  /* Schatten nur für Schwebendes */
+  --shadow-sm: 0 1px 2px #0b2a421a, 0 1px 3px #0b2a420f;
+  --shadow-md: 0 4px 8px #0b2a4214, 0 12px 28px -4px #0b2a4229;
+}

@@ -1,0 +1,50 @@
+{
+  "_hinweis": "Einzige Quelle für den Kiosk (Seite «Kiosk & Gartenbeiz» und Startseite). Preise in CHF. 'season' erscheint im Fliesstext («Bedient ist der Kiosk …»), 'teaser' als Kurzbeschreibung auf der Startseite; die ersten 3 Einträge der ersten Kategorie erscheinen dort mit Preis. Foto optional unter 'photo' (Pfad ab static/, z. B. assets/img/kiosk/bratwurst.jpg). Symbol je Kategorie unter 'icon' (Dateiname aus src/icons/ ohne .svg).",
+  "intro": "Wir sind bekennende Schönwetter-Piloten …",
+  "hours": [
+    { "days": "Wochenenden mit Flugbetrieb", "time": "bedient" }
+  ],
+  "season": "an den Wochenenden mit Flugbetrieb",
+  "teaser": "Bratwurst, Kaffee und Falken-Bier",
+  "menu": [
+    { "title": "Währschaftes", "icon": "flame", "items": [
+      { "name": "Bratwurst vom Grill", "price": "5.–", "photo": "" },
+      { "name": "Cervelat kalt/warm", "price": "4.–", "photo": "" },
+      { "name": "Steak", "text": "nach Vorrat", "price": "8.50", "photo": "" }
+    ] },
+    { "title": "Snacks", "icon": "cookie", "items": [
+      { "name": "Nussgipfel", "price": "2.90" },
+      { "name": "Apfeltasche", "price": "2.90" },
+      { "name": "Biberli/Törtli", "price": "2.–" },
+      { "name": "Kägifret", "price": "2.–" },
+      { "name": "Mars/Snickers", "price": "1.50" },
+      { "name": "Pommes Chips", "price": "2.–" }
+    ] },
+    { "title": "Kaffee / Tee", "icon": "coffee", "items": [
+      { "name": "Kaffee", "price": "2.–" },
+      { "name": "Espresso", "price": "2.50" },
+      { "name": "Tee", "price": "2.50" }
+    ] },
+    { "title": "Alkoholfrei", "icon": "cup-soda", "items": [
+      { "name": "Ice Tea, Mineral, Süssmost", "text": "3 dl 2.50 · 1 l 6.–", "price": "ab 2.50" },
+      { "name": "Rivella, Rivella blau", "text": "3 dl 2.50 · 1 l 6.–", "price": "ab 2.50" },
+      { "name": "Orangina, Citro, Grapefruit", "text": "3 dl 2.50 · 1 l 6.–", "price": "ab 2.50" },
+      { "name": "Coca-Cola, Coca-Cola light", "text": "3 dl 2.50 · 1 l 6.–", "price": "ab 2.50" },
+      { "name": "PET-Flaschen", "text": "5 dl", "price": "3.–" },
+      { "name": "Alle Flaschen", "text": "1,5 l", "price": "7.–" }
+    ] },
+    { "title": "Bier", "icon": "beer", "items": [
+      { "name": "Falken Lager", "text": "5 dl", "price": "4.–" },
+      { "name": "Panaché und 2,8 %", "text": "5 dl", "price": "4.–" },
+      { "name": "Edelfalken", "text": "3 dl", "price": "3.20" },
+      { "name": "Alkoholfrei", "text": "5 dl", "price": "3.80" }
+    ] },
+    { "title": "Wein", "icon": "wine", "items": [
+      { "name": "Apfelwein (Suure Moscht)", "text": "5 dl", "price": "3.80" },
+      { "name": "Löhninger Sommerflirt", "text": "5 dl", "price": "14.–" },
+      { "name": "Löhninger Sommerwind", "text": "5 dl", "price": "14.–" },
+      { "name": "Löhninger Riesling-Silvaner", "text": "5 dl", "price": "14.–" },
+      { "name": "Gächlinger Blauburgunder", "text": "5 dl", "price": "14.–" }
+    ] }
+  ]
+}

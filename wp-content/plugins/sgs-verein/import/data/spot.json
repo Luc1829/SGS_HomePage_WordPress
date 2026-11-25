@@ -1,0 +1,11 @@
+{
+  "_hinweis": "Quelle: schmerlat.ch, Seite «SPOT GPS-Tracking». Freigabe-Links der SPOT-Geräte (maps.findmespot.com). Gerät 5 hat auf der bisherigen Seite keinen Link.",
+  "manual": "https://schmerlat.ch/wp-content/uploads/SPOT-GEN3-Anleitung.pdf",
+  "trackers": [
+    { "name": "SGS SPOT 1", "url": "https://maps.findmespot.com/s/7362" },
+    { "name": "SGS SPOT 2", "url": "https://maps.findmespot.com/s/WFTY" },
+    { "name": "SGS SPOT 3", "url": "https://maps.findmespot.com/s/47MN" },
+    { "name": "SGS SPOT 4", "url": "https://maps.findmespot.com/s/P4P7" },
+    { "name": "SGS SPOT 5", "url": "" }
+  ]
+}

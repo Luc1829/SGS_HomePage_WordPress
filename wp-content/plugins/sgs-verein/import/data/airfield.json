@@ -1,0 +1,203 @@
+{
+  "_hinweis": "Quelle: schmerlat.ch (Aerodrome Info, AIP-Auszug). PRÜFEN: Höhe und Pistenmasse mit dem aktuellen VFR Manual abgleichen. Koordinaten werden für die Wetterabfrage verwendet.",
+  "icao": "LSPF",
+  "name": "Schmerlat",
+  "lat": 47.6904,
+  "lon": 8.527,
+  "elevationFt": 1520,
+  "elevationM": 463,
+  "runways": [
+    {
+      "id": "07",
+      "heading": 70
+    },
+    {
+      "id": "25",
+      "heading": 250
+    }
+  ],
+  "runwayInfo": "Graspiste 07/25",
+  "frequency": "121.055",
+  "frequencyNote": "RDO 121.055 MHz (GLD), HX",
+  "gliderAreaFrequency": "120.880",
+  "operatingHours": "PPR. Montag bis Freitag für Dritte gesperrt (Ausnahmebewilligungen durch den Flugplatzchef).",
+  "aipRemarks": [
+    "Benützungsbedingungen: PPR",
+    "MON–FRI für Dritte gesperrt (Ausnahmebewilligungen durch den Flugplatzchef, flugplatzchef@schmerlat.ch)",
+    "ACFT in transit: Überflug des AD vermeiden, CTN GLD ACT HJ",
+    "Überflug von Siedlungen unbedingt vermeiden",
+    "Flugbeschränkungen in der TMA Zürich: RAC 3-1-3, RAC 4-3 CVFR APP 1/2",
+    "Segelflugzonen Schaffhausen Süd, Nord und Thayngen: RAC 6-1 APP 2, 3 und LFHK",
+    "Einrichtungen: RDO 121.055 MHz (GLD), HX; S1"
+  ],
+  "webcam": "https://schmerlat.ch/www/schmerlat.ch/webcam/current.jpg",
+  "webcamFull": "https://schmerlat.ch/www/schmerlat.ch/webcam/webcam.jpg",
+  "webcamText": "Blick über die Piste 07/25 Richtung Norden nach Siblingen.",
+  "charts": [
+    {
+      "title": "Sichtanflugkarte LSPF (VAC)",
+      "file": "assets/docs/lspf-vac.pdf"
+    },
+    {
+      "title": "Aerodrome Info LSPF",
+      "file": "assets/docs/lspf-adinfo.pdf"
+    }
+  ],
+  "fees": [
+    {
+      "what": "Landung: Motorflugzeuge, TMG, Helikopter und Ultralights bis 2000 kg TOW",
+      "price": "15.– / Ldg."
+    },
+    {
+      "what": "Landung: Motorflugzeuge, Helikopter über 2000 kg TOW",
+      "price": "50.– / Ldg."
+    },
+    {
+      "what": "Startgebühr für selbststartende Segelflugzeuge",
+      "price": "20.– / Start"
+    },
+    {
+      "what": "Abstellen Segelflugzeug, montiert oder im Hänger im Hangar, inkl. Startgebühr und Infrastruktur",
+      "price": "20.– / Tag, 50.– / Woche, max. 1500.–"
+    },
+    {
+      "what": "Abstellen Motorflugzeug im Freien",
+      "price": "20.– / Tag, 50.– / Woche, max. 1500.–"
+    }
+  ],
+  "plan": {
+    "_hinweis": "Schematischer Flugplatzplan im Kompass (Seite Flugplatz LSPF). Masse in Metern ab Pistenmitte: s entlang der Piste Richtung 07→25 (positiv = Richtung Osten), t quer dazu (positiv = Nordseite, negativ = Südseite). Lage aus Landeskarte und Luftbild geschätzt, PRÜFEN.",
+    "radiusM": 340,
+    "runway": {
+      "lengthM": 620,
+      "widthM": 30,
+      "surface": "Gras"
+    },
+    "buildings": [
+      {
+        "label": "Hangar",
+        "s": [
+          -16,
+          20
+        ],
+        "t": [
+          -64,
+          -76
+        ]
+      },
+      {
+        "label": "Schmerlat",
+        "s": [
+          22,
+          42
+        ],
+        "t": [
+          -64,
+          -76
+        ]
+      }
+    ],
+    "signal": {
+      "label": "Signalplatz",
+      "s": -50,
+      "t": -36,
+      "sizeM": 14
+    },
+    "trailers": {
+      "label": "Anhängerparkplatz",
+      "s": [
+        52,
+        120
+      ],
+      "t": [
+        -40,
+        -50
+      ],
+      "count": 7
+    },
+    "forest": [
+      [
+        54,
+        -74
+      ],
+      [
+        126,
+        -60
+      ],
+      [
+        297,
+        -27
+      ],
+      [
+        600,
+        -108
+      ],
+      [
+        773,
+        -147
+      ],
+      [
+        702,
+        -341
+      ],
+      [
+        433,
+        -239
+      ],
+      [
+        313,
+        -203
+      ],
+      [
+        115,
+        -127
+      ],
+      [
+        58,
+        -94
+      ]
+    ],
+    "roads": [
+      [
+        [
+          -789,
+          22
+        ],
+        [
+          -635,
+          6
+        ],
+        [
+          -320,
+          -42
+        ],
+        [
+          -48,
+          -61
+        ],
+        [
+          127,
+          -58
+        ]
+      ],
+      [
+        [
+          -48,
+          -61
+        ],
+        [
+          132,
+          -153
+        ],
+        [
+          300,
+          -238
+        ],
+        [
+          448,
+          -308
+        ]
+      ]
+    ]
+  }
+}

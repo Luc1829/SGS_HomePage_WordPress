@@ -1,0 +1,12 @@
+/* Ergänzungen für WordPress (Admin-Leiste, Bilder in Berichten aus dem Editor). Nur Variablen aus tokens.css. */
+.admin-bar .site-header { top: 32px; }
+@media (max-width: 782px) { .admin-bar .site-header { top: 46px; } }
+.screen-reader-text { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+.report img { max-width: 100%; height: auto; border-radius: var(--radius-lg); }
+.report figure { margin: var(--space-6) 0; }
+.report figcaption, .report .wp-caption-text { font-size: var(--text-small); color: var(--ink-muted); margin-top: var(--space-2); }
+.report .alignleft { float: left; margin: 0 var(--space-6) var(--space-4) 0; max-width: 50%; }
+.report .alignright { float: right; margin: 0 0 var(--space-4) var(--space-6); max-width: 50%; }
+.report .aligncenter { display: block; margin-inline: auto; }
+.report::after { content: ""; display: table; clear: both; }
