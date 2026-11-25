@@ -22,6 +22,7 @@ require_once __DIR__ . '/includes/admin.php';
 require_once __DIR__ . '/includes/status.php';
 require_once __DIR__ . '/includes/shortcodes.php';
 require_once __DIR__ . '/includes/import.php';
+require_once __DIR__ . '/includes/haertung.php';
 
 register_activation_hook(__FILE__, function () {
     sgs_register_types();

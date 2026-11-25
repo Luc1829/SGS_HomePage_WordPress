@@ -27,7 +27,7 @@ function sgs_formulare_seite(): void {
         $e['aufbewahren']     = max(0, (int) ($in['aufbewahren'] ?? 365));
         $e['smtp_host']       = sanitize_text_field($in['smtp_host'] ?? '');
         $e['smtp_port']       = (int) ($in['smtp_port'] ?? 587);
-        $e['smtp_sicherheit'] = in_array($in['smtp_sicherheit'] ?? '', ['tls', 'ssl', 'keine'], true) ? $in['smtp_sicherheit'] : 'tls';
+        $e['smtp_sicherheit'] = in_array($in['smtp_sicherheit'] ?? '', ['tls', 'ssl'], true) ? $in['smtp_sicherheit'] : 'tls';
         $e['smtp_benutzer']   = sanitize_text_field($in['smtp_benutzer'] ?? '');
         if (($in['smtp_passwort'] ?? '') !== '') {
             $e['smtp_passwort'] = (string) $in['smtp_passwort'];
@@ -71,7 +71,7 @@ function sgs_formulare_seite(): void {
     echo $feld('smtp_host', 'Server', $e['smtp_host']);
     echo $feld('smtp_port', 'Port', $e['smtp_port'], 'number');
     echo '<tr><th scope="row"><label for="smtp_sicherheit">Verschlüsselung</label></th><td><select id="smtp_sicherheit" name="smtp_sicherheit">';
-    foreach (['tls' => 'TLS (Port 587)', 'ssl' => 'SSL (Port 465)', 'keine' => 'keine'] as $k => $l) {
+    foreach (['tls' => 'TLS (Port 587)', 'ssl' => 'SSL (Port 465)'] as $k => $l) {
         echo '<option value="' . $k . '"' . selected($e['smtp_sicherheit'], $k, false) . '>' . $l . '</option>';
     }
     echo '</select></td></tr>';
