@@ -16,8 +16,12 @@ function sgs_formular_token_ok(string $name, string $token): bool|string {
     if (!ctype_digit($t) || !hash_equals(substr(wp_hash("sgs_formular|$name|$t", 'nonce'), 0, 20), $sig)) {
         return 'token';
     }
-    // Kein Ablaufdatum: Seiten können beim Hoster zwischengespeichert sein.
-    return time() - (int) $t < 3 ? 'zu_schnell' : true;
+    // Grosszügig gültig, weil Seiten beim Hoster zwischengespeichert sein können, aber nicht für immer.
+    $alter = time() - (int) $t;
+    if ($alter > 30 * DAY_IN_SECONDS) {
+        return 'token';
+    }
+    return $alter < 3 ? 'zu_schnell' : true;
 }
 
 /** Feldnamen und Beschriftungen aus dem Markup lesen (für lesbare E-Mails und als Liste erlaubter Felder). */
@@ -57,11 +61,17 @@ add_shortcode('sgs_formular', function ($atts, $inhalt = '') {
     }
     $felder = sgs_formular_felder_lesen((string) $inhalt);
     $alle = (array) get_option('sgs_formular_felder', []);
-    if (($alle[$name] ?? null) !== $felder) {
+    // Nur veröffentlichte Seiten legen die erlaubten Felder fest, nicht Vorschauen oder Entwürfe.
+    $veroeffentlicht = !is_preview() && get_post_type() === 'page' && get_post_status() === 'publish';
+    if ($veroeffentlicht && ($alle[$name] ?? null) !== $felder) {
         $alle[$name] = $felder;
         update_option('sgs_formular_felder', $alle, false);
     }
     $mail = sgs_formular_empfaenger(SGS_FORMULARE[$name]);
+    // Öffentlich nie die Adresse des Admin-Kontos zeigen (Fallback, wenn kein Empfänger eingetragen ist).
+    if ($mail === get_option('admin_email')) {
+        $mail = function_exists('sgs_hauptkontakt') && ($p = sgs_hauptkontakt()) && is_email($p['email']) ? $p['email'] : '';
+    }
     $zusatz = '<input type="hidden" name="_formular" value="' . esc_attr($name) . '">'
         . '<input type="hidden" name="_t" value="' . esc_attr(sgs_formular_token($name)) . '">'
         . '<div class="hp" aria-hidden="true"><label>Nicht ausfüllen <input name="website" tabindex="-1" autocomplete="off"></label></div>';

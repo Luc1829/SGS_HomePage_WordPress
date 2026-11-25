@@ -12,6 +12,18 @@ add_action('rest_api_init', function () {
     ]);
 });
 
+/**
+ * Adresse des Absenders für das Rate-Limit. IPv6 als /64-Netz, weil ein Anschluss meist ein ganzes Netz hat.
+ * Hinter einem Reverse-Proxy die echte Adresse per Filter «sgs_client_ip» liefern (nur vom eigenen Proxy übernehmen).
+ */
+function sgs_client_netz(): string {
+    $ip = (string) apply_filters('sgs_client_ip', (string) ($_SERVER['REMOTE_ADDR'] ?? ''));
+    if (filter_var($ip, FILTER_VALIDATE_IP, FILTER_FLAG_IPV6)) {
+        return (string) inet_ntop(substr((string) inet_pton($ip), 0, 8) . str_repeat("\0", 8));
+    }
+    return $ip;
+}
+
 function sgs_formular_antwort(WP_REST_Request $req, bool $ok, string $name, int $status = 200) {
     // Ohne JavaScript: zurück zur Seite mit Meldung. Mit JavaScript (site.js): JSON.
     if (!str_contains((string) $req->get_header('accept'), 'application/json')) {
@@ -37,8 +49,8 @@ function sgs_formular_empfangen(WP_REST_Request $req) {
     if (sgs_formular_token_ok($name, (string) ($daten['_t'] ?? '')) !== true) {
         return sgs_formular_antwort($req, false, $name, 400);
     }
-    // Höchstens 10 Anfragen pro Stunde von derselben Adresse.
-    $ip = wp_hash((string) ($_SERVER['REMOTE_ADDR'] ?? ''), 'nonce');
+    // Höchstens 10 Anfragen pro Stunde von derselben Adresse (IPv6: ganzes /64-Netz).
+    $ip = wp_hash(sgs_client_netz(), 'nonce');
     $zaehler = (int) get_transient("sgs_f_$ip");
     if ($zaehler >= 10) {
         return sgs_formular_antwort($req, false, $name, 429);
@@ -96,7 +108,12 @@ function sgs_formular_empfangen(WP_REST_Request $req) {
 
     // Bestätigung an den Absender. Bewusst ohne die eingegebenen Texte, damit das Formular nicht
     // zum Versand fremder Inhalte an beliebige Adressen missbraucht werden kann.
-    if ($email && ($daten['kopie'] ?? '') === 'ja') {
+    // Höchstens eine Bestätigung pro Adresse und Tag, insgesamt höchstens 50 pro Tag (kein E-Mail-Bombing).
+    $pro_adresse = 'sgs_k_' . wp_hash(strtolower($email), 'nonce');
+    $gesamt      = (int) get_transient('sgs_k_gesamt');
+    if ($email && ($daten['kopie'] ?? '') === 'ja' && !get_transient($pro_adresse) && $gesamt < 50) {
+        set_transient($pro_adresse, 1, DAY_IN_SECONDS);
+        set_transient('sgs_k_gesamt', $gesamt + 1, DAY_IN_SECONDS);
         $bestaetigung = "Guten Tag\n\nVielen Dank für deine Anfrage ($titel) an die Segelfluggruppe Schaffhausen. "
             . "Wir haben sie erhalten und melden uns so rasch wie möglich bei dir."
             . "\n\nFreundliche Grüsse\nSegelfluggruppe Schaffhausen, Flugplatz Schmerlat\n\n"
@@ -121,8 +138,7 @@ add_action('phpmailer_init', function ($mailer) {
     $mailer->isSMTP();
     $mailer->Host       = $e['smtp_host'];
     $mailer->Port       = (int) $e['smtp_port'];
-    $mailer->SMTPSecure = in_array($e['smtp_sicherheit'], ['tls', 'ssl'], true) ? $e['smtp_sicherheit'] : '';
-    $mailer->SMTPAutoTLS = $e['smtp_sicherheit'] !== 'keine';
+    $mailer->SMTPSecure = $e['smtp_sicherheit'] === 'ssl' ? 'ssl' : 'tls'; // nie unverschlüsselt
     $passwort = defined('SGS_SMTP_PASSWORT') ? (string) SGS_SMTP_PASSWORT : (string) $e['smtp_passwort'];
     if ($e['smtp_benutzer'] !== '') {
         $mailer->SMTPAuth = true;

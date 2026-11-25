@@ -131,9 +131,10 @@
       }
       const h = $('[data-wx-hourly]', box);
       if (h && w.hourly) {
-        h.innerHTML = w.hourly.time.map((t, i) => `<div><b>${t.slice(11, 16)} LT</b>
-          ${miniBarb(w.hourly.wind_speed_10m[i], w.hourly.wind_direction_10m[i])}
-          ${String(Math.round(w.hourly.wind_direction_10m[i])).padStart(3, '0')}° / ${Math.round(w.hourly.wind_speed_10m[i])} kt<br>${Math.round(w.hourly.temperature_2m[i])}°<br><span class="muted">${w.hourly.cloud_cover[i]}% Wolken</span></div>`).join('');
+        // Fremddaten: Zeit nur Ziffern und Doppelpunkt, alles andere als Zahl.
+        h.innerHTML = w.hourly.time.map((t, i) => `<div><b>${String(t).slice(11, 16).replace(/[^\d:]/g, '')} LT</b>
+          ${miniBarb(Number(w.hourly.wind_speed_10m[i]), Number(w.hourly.wind_direction_10m[i]))}
+          ${String(Math.round(w.hourly.wind_direction_10m[i])).padStart(3, '0')}° / ${Math.round(w.hourly.wind_speed_10m[i])} kt<br>${Math.round(w.hourly.temperature_2m[i])}°<br><span class="muted">${Math.round(Number(w.hourly.cloud_cover[i]))}% Wolken</span></div>`).join('');
       }
     }).catch(() => set('time', 'Wetterdaten im Moment nicht erreichbar.'));
   }
@@ -153,7 +154,9 @@
         form.reset();
       } catch {
         msg.className = 'form-msg err';
-        msg.innerHTML = `Senden fehlgeschlagen. Bitte per E-Mail an <a href="mailto:${form.dataset.mail}">${form.dataset.mail}</a> schicken.`;
+        msg.textContent = 'Senden fehlgeschlagen. Bitte per E-Mail an ';
+        const mail = form.dataset.mail || '';
+        msg.append(Object.assign(document.createElement('a'), { href: 'mailto:' + mail, textContent: mail }), ' schicken.');
       } finally { btn.disabled = false; }
     });
   });

@@ -18,6 +18,7 @@ require_once __DIR__ . '/includes/anfragen.php';
 require_once __DIR__ . '/includes/einstellungen.php';
 
 register_activation_hook(__FILE__, function () {
+    sgs_anfragen_rechte_vergeben();
     if (!wp_next_scheduled('sgs_anfragen_aufraeumen')) {
         wp_schedule_event(time() + HOUR_IN_SECONDS, 'daily', 'sgs_anfragen_aufraeumen');
     }
