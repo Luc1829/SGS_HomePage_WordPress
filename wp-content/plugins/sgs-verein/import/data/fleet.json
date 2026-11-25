@@ -1,0 +1,24 @@
+{
+  "_hinweis": "Quelle: schmerlat.ch, Seite «Flugzeugpark der SGS». 'specs' sind frei wählbare Kennzahlen (Name: Wert).",
+  "groups": [
+    { "title": "Schulung", "text": "Mit diesen Flugzeugen machen unsere Flugschüler die ersten Starts und den Umstieg auf den Einsitzer.", "planes": [
+      { "name": "Schleicher ASK 21", "reg": "HB-3038", "cn": "NS", "text": "Schulungsdoppelsitzer", "photo": "assets/img/flotte/ask21.jpg", "specs": { "Spannweite": "17 m", "Gleitzahl": "33,5" } },
+      { "name": "Rolladen-Schneider LS4b", "reg": "HB-3120", "cn": "O4", "text": "Schulungs-Einsitzer der Standardklasse", "photo": "assets/img/flotte/ls4b.jpg", "specs": { "Spannweite": "15 m", "Gleitzahl": "40,5" } }
+    ] },
+    { "title": "Leistung und Streckenflug", "text": "Für Streckenflüge in den Schwarzwald, auf die Schwäbische Alb und in den Jura.", "planes": [
+      { "name": "Schempp-Hirth Duo Discus XT", "reg": "HB-2424", "cn": "SM", "text": "Leistungsdoppelsitzer der Doppelsitzerklasse", "photo": "assets/img/flotte/duo-discus-xt.jpg", "specs": { "Spannweite": "20 m mit Winglets", "Gleitzahl": "47" } },
+      { "name": "Schempp-Hirth Discus b", "reg": "HB-1812", "cn": "S5", "text": "Einsitzer der Standardklasse", "photo": "assets/img/flotte/discus-b.jpg", "specs": { "Spannweite": "15 m", "Gleitzahl": "41" } },
+      { "name": "Rolladen-Schneider LS8-18", "reg": "HB-3294", "cn": "NC", "text": "Einsitzer der 18-m-Klasse", "photo": "assets/img/flotte/ls8-18.jpg", "specs": { "Spannweite": "18 m", "Gleitzahl": "48" } },
+      { "name": "Schempp-Hirth Ventus 2ct", "reg": "HB-2337", "cn": "NA", "text": "Einsitzer der 18-m-Klasse", "photo": "assets/img/flotte/ventus-2ct.jpg", "specs": { "Spannweite": "18 m", "Gleitzahl": "52" } },
+      { "name": "Schempp-Hirth Ventus 2cxt", "reg": "HB-2490", "cn": "7D", "text": "Einsitzer der 18-m-Klasse", "photo": "assets/img/flotte/ventus-2cxt.jpg", "specs": { "Spannweite": "18 m", "Gleitzahl": "52" } }
+    ] },
+    { "title": "Motorsegler", "text": "Für die TMG-Ausbildung, Reiseflüge und Rundflüge.", "planes": [
+      { "name": "Diamond HK36 TTC Super Dimona", "reg": "HB-2355", "text": "Reisemotorsegler (TMG)", "photo": "assets/img/flotte/super-dimona.jpg", "link": "lernen/dimona/", "specs": { "Spannweite": "16,33 m mit Winglets", "Motor": "Rotax 914, 115 PS" } }
+    ] },
+    { "title": "Schlepp- und Motorflugzeuge", "text": "Sie schleppen unsere Segelflugzeuge in die Höhe und fliegen Gäste auf Rundflügen.", "planes": [
+      { "name": "Robin DR400-180R", "reg": "HB-EXT", "text": "Reise- und Schleppflugzeug, 3 Passagiere", "photo": "assets/img/flotte/robin-dr400.jpg", "specs": { "Spannweite": "8,72 m", "Motor": "Lycoming O-360-A3A, 180 PS" } },
+      { "name": "Robin DR401-180R", "reg": "HB-KLG", "text": "Reise- und Schleppflugzeug, 3 Passagiere", "photo": "assets/img/flotte/robin-dr401.jpg", "specs": { "Spannweite": "8,72 m", "Motor": "Lycoming O-360-A3A, 180 PS" } },
+      { "name": "Piper J3C/L4", "reg": "HB-OIO", "text": "Oldtimer aus ehemaligen US-Beständen, Baujahr 1944, seit 1946 auf dem Schmerlat. Zehntausende Segelflugzeug-Schlepps und Hunderte Passagierflüge.", "photo": "assets/img/flotte/piper-l4.jpg", "specs": { "Spannweite": "6,83 m", "Baujahr": "1944" } }
+    ] }
+  ]
+}

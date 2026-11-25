@@ -1,0 +1,41 @@
+{
+  "_hinweis": "Quelle: schmerlat.ch, «Die Geschichte der Segelfluggruppe Schaffhausen» von Richard Schneider. Der volle Text steht in src/pages/verein/index.mjs.",
+  "items": [
+    {
+      "year": "1932–37",
+      "title": "Suche nach einem Fluggelände",
+      "text": "Versuche auf dem Griesbach in Schaffhausen, auf dem Kapf oberhalb Thayngen und auf dem Hallauerberg überzeugen nicht. Nach fünf Jahren finden die Mitglieder auf dem Schmerlat ihre bleibende Heimat.",
+      "photo": "assets/img/geschichte/1934-griesbach.jpg"
+    },
+    {
+      "year": "1933",
+      "title": "Gründung am 1. Mai",
+      "text": "Eine Handvoll junger, flugbegeisterter Idealisten gründet die Segelfluggruppe Schaffhausen, gerade genug, um alle Vorstandsämter zu besetzen. Ihre Freizeit stecken sie in den Bau eines Schulflugzeugs.",
+      "photo": "assets/img/geschichte/1934-zoegling.jpg"
+    },
+    {
+      "year": "1937",
+      "title": "Erster Windenstart auf dem Schmerlat",
+      "text": "Am 20. Juni wird der erste Windenstart geprobt. Im September folgt ein Werbeflugtag, dem die Bevölkerung grosse Beachtung schenkt.",
+      "photo": ""
+    },
+    {
+      "year": "1938",
+      "title": "Hangar in Fronarbeit",
+      "text": "Die Mitglieder bauen einen Flugzeughangar mit Aufenthaltsraum, obwohl die SGS noch keinen Quadratmeter Land besitzt.",
+      "photo": ""
+    },
+    {
+      "year": "1946",
+      "title": "Die Piper kommt",
+      "text": "Die Piper HB-OIO, Baujahr 1944, fliegt seit 1946 auf dem Schmerlat und hat seither zehntausende Segelflugzeuge geschleppt.",
+      "photo": "assets/img/geschichte/1946.jpg"
+    },
+    {
+      "year": "heute",
+      "title": "Der nördlichste Flugplatz der Schweiz",
+      "text": "Stück um Stück hat die SGS das Land erworben. Heute gehören ihr zwei grosse Hangars, ein Aufenthaltsraum und ein Kiosk mit Gartenwirtschaft, ein beliebtes Ausflugsziel.",
+      "photo": ""
+    }
+  ]
+}

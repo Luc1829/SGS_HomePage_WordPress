@@ -1,0 +1,41 @@
+{
+  "_hinweis": "Einzige Quelle für Preise und Eckdaten der Angebote. Erscheint auf mehreren Seiten (Startseite, Ausbildung, Rundflüge, Gutscheinformular, Mitglied werden, Flüüger-Fäscht). Beträge als Zahl in CHF, die Anzeige «CHF 150.–» erzeugt chf().",
+  "schnupperflug": {
+    "preis": 150,
+    "preisHinweis": "inkl. MWST",
+    "dauer": "ca. 30 Minuten",
+    "termine": "April bis Oktober, nach Voranmeldung",
+    "flughoehe": "ca. 1000 m über Grund"
+  },
+  "ausbildung": {
+    "alleinflugAb": 14,
+    "fluegeBisAlleinflug": "30 bis 40",
+    "dauer": "ein bis zwei Jahre",
+    "dauerKurz": "1–2 Jahre",
+    "fluglehrer": "ca. 12"
+  },
+  "rundflug": {
+    "segelflug": { "preis": 150, "dauer": "rund 60 Min.", "ausklinkhoehe": "rund 1500 m ü. M." },
+    "motorflugMinutenpreise": [
+      { "flugzeug": "Robin (bis 3 Passagiere)", "preis": 6.2 },
+      { "flugzeug": "Piper J3C/L4 (1 Passagier)", "preis": 4.7 },
+      { "flugzeug": "Super Dimona (1 Passagier)", "preis": 4 }
+    ],
+    "motorflugGutscheine": [
+      { "preis": 120, "text": "rund 20 Min., Kantonsrundflug" },
+      { "preis": 180, "text": "rund 30 Min., Untersee-Rundflug" },
+      { "preis": 360, "text": "rund 60 Min., Säntis-Rundflug" }
+    ],
+    "gutscheinGueltig": "5 Jahre",
+    "anmeldung": "Donnerstag"
+  },
+  "mitglied": {
+    "passivMindestbeitrag": 20,
+    "passivGutscheinAb": 45,
+    "passivGutscheinWert": 25
+  },
+  "fest": {
+    "parkgebuehr": 10,
+    "parkgebuehrJahr": 2026
+  }
+}

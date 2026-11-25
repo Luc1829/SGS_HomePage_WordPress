@@ -1,0 +1,3 @@
+/* Editor: gleiche Schrift und Farben wie die Webseite, damit Berichte im Editor so aussehen wie online. */
+body { font-family: var(--font-sans, "Source Sans 3", system-ui, sans-serif); color: var(--ink); }
+a { color: var(--link); }

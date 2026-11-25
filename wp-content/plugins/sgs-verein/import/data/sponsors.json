@@ -1,0 +1,13 @@
+{
+  "_hinweis": "Quelle: schmerlat.ch, «Sponsoren des SGS Flüüger-Fäscht» (Stand 2026).",
+  "year": 2026,
+  "items": [
+    { "name": "Thalberg Garage GmbH", "place": "Schaffhausen", "url": "https://thalberggarage.ch/" },
+    { "name": "Clientis BS Bank Schaffhausen", "place": "Hallau", "url": "https://bsb.clientis.ch/" },
+    { "name": "Wäckerlin Transporte", "place": "Schleitheim", "url": "https://waeckerlin-ag.ch/" },
+    { "name": "Hannibal Uhren und Schmuck, Horola AG", "place": "Schaffhausen", "url": "https://hannibal-watches.com/" },
+    { "name": "Radio Munot", "place": "Schaffhausen", "url": "https://www.radiomunot.ch/" },
+    { "name": "Falken Brauerei", "place": "Schaffhausen", "url": "https://www.falken.ch/" },
+    { "name": "Stage Sound", "place": "Neunkirch", "url": "https://www.stage-sound.ch/" }
+  ]
+}
